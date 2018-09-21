@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FoodApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gSI-pb-NcZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LCt-fq-f6C">
+                                    <size key="itemSize" width="142" height="133"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cellFood" id="vbU-ga-GV1" customClass="CVCFood" customModule="FoodApp" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="142" height="133"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="142" height="133"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee_pot" translatesAutoresizingMaskIntoConstraints="NO" id="i2K-dW-eI3">
+                                                    <rect key="frame" x="21" y="4" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="100" id="m6q-Ln-uOc"/>
+                                                        <constraint firstAttribute="width" constant="100" id="v43-pW-gzd"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6Q-fu-cv3">
+                                                    <rect key="frame" x="21" y="107" width="100" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="i2K-dW-eI3" secondAttribute="trailing" constant="21" id="05B-YA-Mdg"/>
+                                            <constraint firstItem="f6Q-fu-cv3" firstAttribute="leading" secondItem="i2K-dW-eI3" secondAttribute="leading" id="3M5-4m-m4g"/>
+                                            <constraint firstItem="f6Q-fu-cv3" firstAttribute="trailing" secondItem="i2K-dW-eI3" secondAttribute="trailing" id="JHB-6H-3Nn"/>
+                                            <constraint firstItem="i2K-dW-eI3" firstAttribute="leading" secondItem="vbU-ga-GV1" secondAttribute="leading" constant="21" id="Rcr-dj-hwB"/>
+                                            <constraint firstItem="i2K-dW-eI3" firstAttribute="top" secondItem="vbU-ga-GV1" secondAttribute="top" constant="4" id="VXy-HD-nV7"/>
+                                            <constraint firstItem="f6Q-fu-cv3" firstAttribute="top" secondItem="i2K-dW-eI3" secondAttribute="bottom" constant="3" id="bst-9H-9Re"/>
+                                            <constraint firstAttribute="bottom" secondItem="f6Q-fu-cv3" secondAttribute="bottom" constant="5" id="lu5-rm-ywm"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="iv_FoodImage" destination="i2K-dW-eI3" id="YHy-xY-if6"/>
+                                            <outlet property="iv_FoodName" destination="f6Q-fu-cv3" id="PGH-1A-8o0"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gSI-pb-NcZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6m3-kf-Se2"/>
+                            <constraint firstItem="gSI-pb-NcZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Lhs-G0-jJl"/>
+                            <constraint firstItem="gSI-pb-NcZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="WtK-eX-Ze1"/>
+                            <constraint firstItem="gSI-pb-NcZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XnZ-BX-7Y4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cvListOfFoods" destination="gSI-pb-NcZ" id="a9f-FC-DT8"/>
+                        <segue destination="cfQ-EW-dw9" kind="show" identifier="showDeatalis" id="fYf-rf-eE7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="117.39130434782609"/>
+        </scene>
+        <!--Food Detalis-->
+        <scene sceneID="kii-1S-GZc">
+            <objects>
+                <viewController id="cfQ-EW-dw9" customClass="VCFoodDetalis" customModule="FoodApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fWg-Gn-RYh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coffee_pot" translatesAutoresizingMaskIntoConstraints="NO" id="HGT-rT-VzH">
+                                <rect key="frame" x="87" y="63" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="eoT-KC-exZ"/>
+                                    <constraint firstAttribute="height" constant="200" id="nPK-Q2-Xfs"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CBd-NH-RvV">
+                                <rect key="frame" x="87" y="297" width="200" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cx0-dx-vys">
+                                <rect key="frame" x="16" y="338" width="343" height="225"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JST-HX-OCp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="v7v-GH-tLC">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="pjN-yL-i5Y">
+                                            <connections>
+                                                <action selector="buBack:" destination="cfQ-EW-dw9" id="qda-Tv-Jy3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HGT-rT-VzH" firstAttribute="top" secondItem="JST-HX-OCp" secondAttribute="bottom" constant="19" id="2xm-Uq-dTE"/>
+                            <constraint firstItem="CBd-NH-RvV" firstAttribute="top" secondItem="HGT-rT-VzH" secondAttribute="bottom" constant="34" id="8NS-xH-GGm"/>
+                            <constraint firstItem="cx0-dx-vys" firstAttribute="leading" secondItem="dlk-EE-GFZ" secondAttribute="leading" constant="16" id="DLu-Le-Hpp"/>
+                            <constraint firstItem="JST-HX-OCp" firstAttribute="leading" secondItem="dlk-EE-GFZ" secondAttribute="leading" id="DQm-3s-joy"/>
+                            <constraint firstItem="dlk-EE-GFZ" firstAttribute="trailing" secondItem="HGT-rT-VzH" secondAttribute="trailing" constant="88" id="KSj-7q-0tz"/>
+                            <constraint firstItem="HGT-rT-VzH" firstAttribute="leading" secondItem="dlk-EE-GFZ" secondAttribute="leading" constant="87" id="Mqy-yA-sOg"/>
+                            <constraint firstItem="CBd-NH-RvV" firstAttribute="leading" secondItem="HGT-rT-VzH" secondAttribute="leading" id="TXn-jU-hbp"/>
+                            <constraint firstItem="JST-HX-OCp" firstAttribute="trailing" secondItem="dlk-EE-GFZ" secondAttribute="trailing" id="X16-pS-IHG"/>
+                            <constraint firstItem="CBd-NH-RvV" firstAttribute="trailing" secondItem="HGT-rT-VzH" secondAttribute="trailing" id="Z2M-QO-aww"/>
+                            <constraint firstItem="JST-HX-OCp" firstAttribute="top" secondItem="fWg-Gn-RYh" secondAttribute="top" id="cYO-P6-TVR"/>
+                            <constraint firstItem="cx0-dx-vys" firstAttribute="top" secondItem="CBd-NH-RvV" secondAttribute="bottom" constant="11" id="eFF-4o-Z37"/>
+                            <constraint firstItem="dlk-EE-GFZ" firstAttribute="bottom" secondItem="cx0-dx-vys" secondAttribute="bottom" constant="104" id="jul-4q-8bE"/>
+                            <constraint firstItem="dlk-EE-GFZ" firstAttribute="trailing" secondItem="cx0-dx-vys" secondAttribute="trailing" constant="16" id="wN9-MR-m3T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dlk-EE-GFZ"/>
+                    </view>
+                    <connections>
+                        <outlet property="iv_FoodDesc" destination="cx0-dx-vys" id="A83-rH-lvM"/>
+                        <outlet property="iv_FoodImage" destination="HGT-rT-VzH" id="6Df-dp-4Qf"/>
+                        <outlet property="iv_FoodName" destination="CBd-NH-RvV" id="cE6-ew-kna"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fCh-zB-9sU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1016.8" y="116.49175412293854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="coffee_pot" width="100" height="100"/>
+    </resources>
+</document>
